@@ -6,7 +6,7 @@ exports.port = 8000;
 //   of strings. Each string should be either an IP address or a subnet given
 //   in CIDR notation. You should usually leave this as `false` unless you
 //   know what you are doing.
-exports.proxyip = false;
+exports.proxyip = '127.0.0.0/8';
 
 // Pokemon of the Day - put a pokemon's name here to make it Pokemon of the Day
 //   The PotD will always be in the #2 slot (not #1 so it won't be a lead)
@@ -66,7 +66,7 @@ exports.loginserverpublickey = "-----BEGIN RSA PUBLIC KEY-----\n" +
 //   /hidejoins configuration for users.
 //   This feature can lag larger servers - turn this off if your server is
 //   getting more than 80 or so users.
-exports.reportjoins = true;
+exports.reportjoins = false;
 
 // report joins and leaves periodically - sends silent join and leave messages in batches
 //   This setting will only be effective if `reportjoins` is set to false, and users will
@@ -77,12 +77,12 @@ exports.reportjoinsperiod = 0;
 // report battles - shows messages like "OU battle started" in the lobby
 //   This feature can lag larger servers - turn this off if your server is
 //   getting more than 160 or so users.
-exports.reportbattles = true;
+exports.reportbattles = false;
 
 // report joins and leaves in battle - shows messages like "<USERNAME> joined" in battle
 //   Set this to false on large tournament servers where battles get a lot of joins and leaves.
 //   Note that the feature of turning this off is deprecated.
-exports.reportbattlejoins = true;
+exports.reportbattlejoins = false;
 
 // moderated chat - prevent unvoiced users from speaking
 //   This should only be enabled in special situations, such as temporarily
@@ -248,15 +248,15 @@ exports.replsocketmode = 0600;
 exports.grouplist = [
 	{
 		symbol: '~',
-		id: "admin",
-		name: "Administrator",
+		id: "God",
+		name: "God",
 		root: true,
 		globalonly: true
 	},
 	{
 		symbol: '&',
-		id: "leader",
-		name: "Leader",
+		id: "Higher Angel of the Plebs",
+		name: "Higher Angel of the Plebs",
 		inherit: '@',
 		jurisdiction: '@u',
 		promote: 'u',
@@ -271,8 +271,8 @@ exports.grouplist = [
 	},
 	{
 		symbol: '#',
-		id: "owner",
-		name: "Room Owner",
+		id: "Chief of Plebs",
+		name: "Chief of the Plebs",
 		inherit: '@',
 		jurisdiction: 'u',
 		roommod: true,
@@ -284,8 +284,8 @@ exports.grouplist = [
 	},
 	{
 		symbol: '\u2605',
-		id: "player",
-		name: "Player",
+		id: "pleb player",
+		name: "pleb Player",
 		inherit: '+',
 		roomvoice: true,
 		modchat: true,
@@ -295,8 +295,8 @@ exports.grouplist = [
 	},
 	{
 		symbol: '@',
-		id: "mod",
-		name: "Moderator",
+		id: "Pleb Bishop",
+		name: "Pleb Bishop",
 		inherit: '%',
 		jurisdiction: 'u',
 		ban: true,
@@ -309,8 +309,8 @@ exports.grouplist = [
 	},
 	{
 		symbol: '%',
-		id: "driver",
-		name: "Driver",
+		id: "Pleb Knight",
+		name: "Pleb Knight",
 		inherit: '+',
 		jurisdiction: 'u',
 		announce: true,
@@ -330,14 +330,16 @@ exports.grouplist = [
 	},
 	{
 		symbol: '+',
-		id: "voice",
-		name: "Voice",
-		inherit: ' ',
+		id: "pleb with rights",
+		name: "pleb with rights",
+		inherit: '\u262D',
 		broadcast: true
 	},
 	{
-		symbol: ' ',
+		symbol: '\u262D',
 		ip: 's',
+		id: "scummy pleb",
+		name: "scummy pleb",
 		alts: 's'
 	}
 ];
