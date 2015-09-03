@@ -1731,12 +1731,12 @@ var commands = exports.commands = {
 	groups: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox(
-			"+ <b>Voice</b> - They can use ! commands like !groups, and talk during moderated chat<br />" +
-			"% <b>Driver</b> - The above, and they can mute. Global % can also lock users and check for alts<br />" +
-			"@ <b>Moderator</b> - The above, and they can ban users<br />" +
-			"&amp; <b>Leader</b> - The above, and they can promote to moderator and force ties<br />" +
-			"# <b>Room Owner</b> - They are leaders of the room and can almost totally control it<br />" +
-			"~ <b>Administrator</b> - They can do anything, like change what this message says"
+			"+ <b>Plebs with Rights</b> - These plebs have some rights, like speaking during a mod chat. Otherwise, they are still total plebs.<br />" +
+			"% <b>Pleb Knight</b> - The pleb knights will cut you.<br />" +
+			"@ <b>Pleb Bishop</b> - Pleb bishops can destroy plebs, and pleb knights. They bow down to the almighty Gods.<br />" +
+			"&amp; <b>Higher Angels</b> - They are capable of conducting grand promotions in the world of plebs. They are also extremely close to the Gods.<br />" +
+			"# <b>Chief of the Plebs</b> - It's a better name than scummy pleb, just saying.<br />" +
+			"~ <b>God</b> - They can do anything, like blow up your mum. They are also the almighty weilders of thunderbolts and other god-like projectiles. If you mess with us, you will be banished."
 		);
 	},
 	groupshelp: ["/groups - Explains what the + % @ # & next to people's names mean.",
